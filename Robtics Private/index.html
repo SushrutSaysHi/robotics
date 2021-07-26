@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>Image Test</title>
+          <!----Links-->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+          <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+          
+     </head>
+     <body style="background-color: #363030; color: white;">
+          <div class="container-fluid">
+               <div class="row" style="margin-top: 30px;">
+                    <div class="col" style="border: 3px solid white;">
+                         <label>Webcam -</label>
+                         <div id="webcam" style="height: 350; width: 400;"></div>
+                    </div>
+                    <div class="col" style="border: 3px solid white;">
+                         <label>Snapshot -</label>
+                         <div id="snap" style="height: 350; width: 400;"></div>
+                    </div>
+               </div>          
+                        <button type="button" class="btn btn-outline-success" style="margin-top: 40px;" onclick="identify_cap()">Capture & Identify</button>
+                        <input type="file" accept="image/*">
+                        <div class="jumbotron" style="margin-top: 30px; border-radius: 10px; color: black;">
+                             <div class="container">
+                                  <label>Microsoft Azure result: </label><span id="mc_az_resuk" style="color: black;"></span>
+                                  <hr style="background-color: black;">
+                                  <label>Mobile Net Result &nbsp; &nbsp;</label><span id="mob_result" style="color: black;"></span>
+                             </div>
+                        </div>
+          </div>
+          <center>
+               <div style="color: black; margin-top: 190px; padding: 50px; background-color: rgb(70, 68, 68); position: sticky;">©Robotics Private Limited</div>
+          </center>
+          <script src="main.js"></script>
+     </body>
+</html>
